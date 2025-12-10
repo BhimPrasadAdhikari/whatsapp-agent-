@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+
 import chainlit as cl 
 from graph.graph import create_graph
 from langchain_core.messages import AIMessageChunk, HumanMessage
